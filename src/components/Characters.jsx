@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useReducer, useMemo } from 'react'
+import React, { useState, useEffect, useReducer, useMemo, useRef, useCallback } from 'react'
 import './Characters.css'
+import Search from './Search'
 
 const initialState = {
     favorites: [],
@@ -22,6 +23,7 @@ function Characters() {
     const [characters, setCharacters] = useState([]);
     const [favorites, dispatch] = useReducer(favoriteReducer, initialState);
     const [search, setSearch] = useState('');
+    const searchInput = useRef(null);
 
     useEffect(() => {
         fetch('https://rickandmortyapi.com/api/character')
@@ -33,9 +35,13 @@ function Characters() {
         dispatch({ type: 'ADD_TO_FAVORITE', payload: favorite })
     }
 
-    const handleSearch = (event) => {
-        setSearch(event.target.value);
-    }
+    // const handleSearch = () => {
+    //     setSearch(searchInput.current.value);
+    // }
+
+    const handleSearch = useCallback(() => {
+        setSearch(searchInput.current.value)
+    }, [])
 
     const filteredUsers = useMemo(() => (
         characters.filter((user) => {
@@ -46,9 +52,7 @@ function Characters() {
     
     return (
         <React.Fragment>
-            <div className="Search">
-            <input type="text" value={search} onChange={handleSearch} />
-            </div>
+            <Search search={search} searchInput={searchInput} handleSearch={handleSearch} />
 
             <div className="favorites-container">
             {favorites.favorites.map(favorite => (
