@@ -41,3 +41,15 @@ button:hover {
     background-color: #212F3C;
 }
 
+.favorites-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: start;
+}
+
+.favorites-container li {
+    list-style: none;
+    padding: 5px 20px;
+}
+

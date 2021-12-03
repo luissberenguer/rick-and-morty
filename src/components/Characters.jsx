@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useReducer } from 'react'
+import React, { useState, useEffect, useReducer, useMemo } from 'react'
 import './Characters.css'
 
 const initialState = {
@@ -21,6 +21,7 @@ function Characters() {
 
     const [characters, setCharacters] = useState([]);
     const [favorites, dispatch] = useReducer(favoriteReducer, initialState);
+    const [search, setSearch] = useState('');
 
     useEffect(() => {
         fetch('https://rickandmortyapi.com/api/character')
@@ -31,16 +32,37 @@ function Characters() {
     const handleClick = favorite => {
         dispatch({ type: 'ADD_TO_FAVORITE', payload: favorite })
     }
+
+    const handleSearch = (event) => {
+        setSearch(event.target.value);
+    }
+
+    const filteredUsers = useMemo(() => (
+        characters.filter((user) => {
+            return user.name.toLowerCase().includes(search.toLowerCase())
+        })),
+        [characters, search]
+    )
     
     return (
-        <div className="Characters">
-            {favorites.favorites.map(favorite => (
-                    <li key={favorite.id}>
-                        {favorite.name}
-                    </li>
-            ))}
+        <React.Fragment>
+            <div className="Search">
+            <input type="text" value={search} onChange={handleSearch} />
+            </div>
 
-            {characters.map(character => (
+            <div className="favorites-container">
+            {favorites.favorites.map(favorite => (
+                        <li key={favorite.id}>
+                            {favorite.name}
+                        </li>
+                ))}
+            </div>
+
+        
+            <div className="Characters">
+                
+
+            {filteredUsers.map(character => (
             <div className="character-cointainer" key={character}>
                 <img className="character-image" src={character?.image} alt={character?.name} />
                 <h2>{character?.name}</h2>
@@ -51,6 +73,7 @@ function Characters() {
             </div>
             ))}
         </div>
+        </React.Fragment>
     )
 }
 
