@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/luissberenguer/rick-and-morty/static/css/main.1d71b956.chunk.css",
+    "main.js": "/luissberenguer/rick-and-morty/static/js/main.979beded.chunk.js",
+    "main.js.map": "/luissberenguer/rick-and-morty/static/js/main.979beded.chunk.js.map",
+    "runtime-main.js": "/luissberenguer/rick-and-morty/static/js/runtime-main.011c9e53.js",
+    "runtime-main.js.map": "/luissberenguer/rick-and-morty/static/js/runtime-main.011c9e53.js.map",
+    "static/js/2.9afeb8ea.chunk.js": "/luissberenguer/rick-and-morty/static/js/2.9afeb8ea.chunk.js",
+    "static/js/2.9afeb8ea.chunk.js.map": "/luissberenguer/rick-and-morty/static/js/2.9afeb8ea.chunk.js.map",
+    "index.html": "/luissberenguer/rick-and-morty/index.html",
+    "static/css/main.1d71b956.chunk.css.map": "/luissberenguer/rick-and-morty/static/css/main.1d71b956.chunk.css.map",
+    "static/js/2.9afeb8ea.chunk.js.LICENSE.txt": "/luissberenguer/rick-and-morty/static/js/2.9afeb8ea.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.011c9e53.js",
+    "static/js/2.9afeb8ea.chunk.js",
+    "static/css/main.1d71b956.chunk.css",
+    "static/js/main.979beded.chunk.js"
+  ]
+}
