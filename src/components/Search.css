@@ -1,0 +1,15 @@
+.Search {
+    text-align: center;
+    margin: 40px auto 0;
+    
+}
+
+.Search input {
+    padding: 10px 100px 10px 14px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.Search input:focus {
+    
+}

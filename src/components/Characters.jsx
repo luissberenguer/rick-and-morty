@@ -30,11 +30,7 @@ function Characters() {
     const handleClick = favorite => {
         dispatch({ type: 'ADD_TO_FAVORITE', payload: favorite })
     }
-
-    // const handleSearch = () => {
-    //     setSearch(searchInput.current.value);
-    // }
-
+    
     const handleSearch = useCallback(() => {
         setSearch(searchInput.current.value)
     }, [])

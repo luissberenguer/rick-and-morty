@@ -8,11 +8,20 @@ const Header = () => {
 
     const handleClick = () => {
         setDarkMode(!darkMode);
+        // if (darkMode) {            
+        //     return (
+        //         <style>
+        //             body {
+        //                 color
+        //             }
+        //         </style>
+        //     )
+        // }
     }
 
     return (
         <div className="Header">
-            <h1 style={{color}}>ReactHooks</h1>
+            <h1 style={{color}}>Rick and Morty</h1>
             <button
                 className="DarkMode-button"
                 type="button"

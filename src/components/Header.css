@@ -4,17 +4,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #16A085;
+    background: #97ce4c;
     color: white;
 }
 
 .DarkMode-button {
- padding: 10px 25px;
+ padding: 15px 35px;
  color: white;
  background: #34495E;
  border: transparent;
- border-radius: 10px;
- margin-left: 30px;
+ border-radius: 6px;
+ margin-left: 50px;
  font-size: 16px;
  font-weight: bold;
 }
+
+.DarkMode {
+
+}
+
