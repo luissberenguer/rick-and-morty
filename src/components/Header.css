@@ -1,25 +1,30 @@
 .Header {
-    width: 100%;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #97ce4c;
-    color: white;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #97ce4c;
+  color: white;
 }
 
 .DarkMode-button {
- padding: 15px 35px;
- color: white;
- background: #34495E;
- border: transparent;
- border-radius: 6px;
- margin-left: 50px;
- font-size: 16px;
- font-weight: bold;
+  padding: 15px 35px;
+  color: white;
+  background: #34495e;
+  border: transparent;
+  border-radius: 6px;
+  margin-left: 50px;
+  font-size: 16px;
+  font-weight: bold;
 }
 
-.DarkMode {
-
+.darkMode {
+  color: white;
+  background: #34495e;
 }
 
+.lightMode {
+  color: black;
+  background-color: white;
+}
